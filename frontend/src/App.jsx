@@ -16,10 +16,12 @@ function App() {
     }, []);
 
     return (
-        <div>
-            {products && products.map(product => (
-                <Product key={product.id} product={product} />
-            ))}
+        <div className="container mt-4">
+            <div className="d-flex flex-wrap justify-content-between">
+                {products.map(product => (
+                    <Product key={product.id} product={product} />
+                ))}
+            </div>
         </div>
     )
 }
